@@ -28,6 +28,7 @@ class AppSchema extends CakeSchema {
             'key' => 'primary'
         ),
         'post_id' => array('type' => 'integer', 'null' => false, 'default' => 0),
+        'comment' => array('type' => 'text'),
         'indexes' => array(
             'PRIMARY' => array('column' => 'id', 'unique' => true),
             'post_id' => array('column' => 'post_id'),
