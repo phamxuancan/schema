@@ -7,6 +7,19 @@ class AppSchema extends CakeSchema {
 
     public function after($event = array()) {
     }
+
+    public $user = array(
+        'id'=>array(
+            'type'=>'integer',
+            'null'=>false,
+            'key'=>'primary',
+        ),
+        'username'=>array(
+            'type'=>'string',
+            'null'=>false,
+            'default'=>'testusers'
+        )
+);
     var $comments = array(
         'id' => array(
             'type' => 'integer',
@@ -26,11 +39,5 @@ class AppSchema extends CakeSchema {
             'collate' => 'latin1_general_ci'
         )
     );
-    public $user = array(
-        'id'=>array(
-            'type'=>'integer',
-            'null'=>false,
-            'key'=>'primary',
-        )
-    );
+
 }
